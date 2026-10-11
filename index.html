@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>馬兒一年千里目標啟動｜例行團練永久報名與名冊中心</title>
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=sfSk1spaM-0L92acUwyYliy7A6LZAH8de-IE_PXyA5NIepUN00r41yHOP4Mf9QCb8Fcfaa6mgwE-6Ipn8hQ8DKmY2UphcJQnTV1q-iYGUDm0UkGt2YrQCMmd9zZT_W9GMKinEyl5i-cK_WU0Tna9WALU8X-qeBKlF0qRXXt7Y8iaQheE2bSabzU4KX5ZrbjkJ5tIfsW9w4KniURlKZFYcbDHmaMvj-XUidQkBQjzbgIsk2FHxFm5pXe_SDPN7KBpSncuhwuUAyLGeO7QH8H3RtACR-Q8F2nmqR1YeeuCxTC8_1jk9r-TmgEYMYOkccym" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBMU5qZzRaV0ZrT0dGbFlqUXlOalJsTURBd05qVmtPR1E1TlRBMlptVmhaREEzWmpVMlpqZ3dOV1F3T1dSbE1tSVNDeElIRUo2Xzh0T3BBUmdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kW_GsEKSvXs45Wo-LFASEAuIYGHUq3isW6i--1crO2uYGXvwnaUXiMg7QLX9plaBChjPvIjMuS5vqD4leLBN60WqShq1r6IN_ywbhqClYTfDciuox0CWuea4GyIJNHFGRxx9X1jJYafukMiaT7teS9kwZa5SkNTka6IPcR2dT-4uQTTXZL6STTqr-cVDuxvG8Jz4QpdfVRcPp0fOy-0i1uPU6yN670jwsSp_EmwXm1iXhBWC8EPN0kcZhqZYKvfmsHuvOcQjWNGG94rdoI6MkuQDtfYcCnSGxIqG4j3EzZtxOigoC3RYFEAGTdSp21nC" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBNFlUUTROV05rTlRBeU56a3hZV1F4TURBd05qVmtPVEExTWpJM1lUUm1OREE0TXpReVpqaGxOVE14TVRnMU4yVVNDeElIRUo2Xzh0T3BBUmdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
     :root {
       --primary: #f97316;
       --primary-dark: #ea580c;
@@ -809,15 +809,15 @@ function testWrite() {
             if (r.length >= 2) {
               const k = r[0].trim();
               const v = r[1].trim();
-              if (k.includes("活動期別代號") || k.includes("期別")) eventConfig.session = v;
-              if (k.includes("活動名稱")) eventConfig.title = v;
-              if (k.includes("團練日期") || k.includes("活動日期")) eventConfig.date = v;
-              if (k.includes("集合時間")) eventConfig.time = v;
-              if (k.includes("集合地點")) eventConfig.location = v;
-              if (k.includes("核心標語") || k.includes("標語")) eventConfig.motto = v;
-              if (k.includes("名額上限")) eventConfig.capacity = parseInt(v, 10) || 30;
-              if (k.includes("活動狀態")) eventConfig.status = v;
-              if (k.includes("注意事項")) eventConfig.notice = v;
+              if (k === "活動期別代號" || k === "活動期別") eventConfig.session = v;
+              else if (k === "活動名稱") eventConfig.title = v;
+              else if (k === "團練日期" || k === "活動日期") eventConfig.date = v;
+              else if (k === "集合時間") eventConfig.time = v;
+              else if (k === "集合地點") eventConfig.location = v;
+              else if (k === "核心標語" || k === "標語") eventConfig.motto = v;
+              else if (k === "名額上限") eventConfig.capacity = parseInt(v, 10) || 30;
+              else if (k === "活動狀態") eventConfig.status = v;
+              else if (k === "注意事項") eventConfig.notice = v;
             }
           });
         }
