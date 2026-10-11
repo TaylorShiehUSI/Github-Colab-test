@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>馬兒一年千里目標啟動｜例行團練永久報名與名冊中心</title>
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kW_GsEKSvXs45Wo-LFASEAuIYGHUq3isW6i--1crO2uYGXvwnaUXiMg7QLX9plaBChjPvIjMuS5vqD4leLBN60WqShq1r6IN_ywbhqClYTfDciuox0CWuea4GyIJNHFGRxx9X1jJYafukMiaT7teS9kwZa5SkNTka6IPcR2dT-4uQTTXZL6STTqr-cVDuxvG8Jz4QpdfVRcPp0fOy-0i1uPU6yN670jwsSp_EmwXm1iXhBWC8EPN0kcZhqZYKvfmsHuvOcQjWNGG94rdoI6MkuQDtfYcCnSGxIqG4j3EzZtxOigoC3RYFEAGTdSp21nC" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBNFlUUTROV05rTlRBeU56a3hZV1F4TURBd05qVmtPVEExTWpJM1lUUm1OREE0TXpReVpqaGxOVE14TVRnMU4yVVNDeElIRUo2Xzh0T3BBUmdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=PzmaH2tM1lbw9IljNVNPGSNaccQzr4ko4TSbxCsJLXUVGI6XO2uFkj2OKmNu24fA3AtqldSSDNE2Xy9wD5Qnna8rH__5r7YxFZYzbxg79Pd-8mleBh3dssA2oO6_y0Xh75pzMvrK-ciPyiE9NRbJGYXyEEfMTo4fEUE8TEFUXIcWA2lD7-45F5qHxuNEV5Eh8wvmzQ5yQp1AHujcszDpvQVZyWedTc3Z6yEuyGvoKWyjTnlsHVtAW6-GFW-T_ht2pJ3SYLo1n-tz0gNOA8UPOHASvNHFHVaZLYj1O50DChh2xpLC56yAcTDUqCHuNO1K" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBNU5ERmpOalU1T1RZd1pHUTJPREkxTURBd05qVmtPVEl4Wmpjd05qRXhNekE0TXpReE56ZGxZelV3TWpNMU1XTVNDeElIRUo2Xzh0T3BBUmdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
     :root {
       --primary: #f97316;
       --primary-dark: #ea580c;
@@ -470,7 +470,7 @@
     <!-- Header Banner -->
     <header class="header">
       <div class="badge-row">
-        <span class="badge" id="eventBadge">第 26 次例行團練 🏃</span>
+        <span class="badge" id="eventBadge">例行團練 🏃</span>
         <span class="status-pill" id="eventStatusBadge">開放報名中</span>
       </div>
       <h1 id="eventTitle">🏃 馬兒一年千里目標啟動 第26次團練</h1>
@@ -672,16 +672,19 @@
           若需更新試算表後台代碼，可複製以下內容貼至 Apps Script 並發布「新版本」：
         </p>
         <pre id="gasCode">function doPost(e) {
+  var lock = LockService.getScriptLock();
   try {
+    lock.waitLock(10000); // 鎖定防並發衝突
+    
     var ss = SpreadsheetApp.openById("1stL40m7QoE2x9p_JbmX-0VKtmLC8b7gnBkw1R7jmloM");
     var masterSheet = ss.getSheetByName("完整名冊_後台");
     var settingsSheet = ss.getSheetByName("活動設定");
     
-    // 1. 取得當前活動期別與名額上限
-    var currentSession = settingsSheet.getRange("B1").getValue().toString().trim() || "第26次";
+    // 1. 自動從《活動設定》讀取當前期別 (B1) 與名額上限 (B7)
+    var currentSession = settingsSheet.getRange("B1").getValue().toString().trim() || "第28次";
     var maxCap = parseInt(settingsSheet.getRange("B7").getValue(), 10) || 30;
     
-    // 2. 解析網頁送入的資料
+    // 2. 解析網頁表單傳入資料
     var data = {};
     if (e && e.postData && e.postData.contents) {
       try { data = JSON.parse(e.postData.contents); } catch(err) { data = e.parameter || {}; }
@@ -694,20 +697,33 @@
     var pace = data.pace || (e && e.parameter && e.parameter.pace) || "歡樂跑 5K";
     var remarks = data.remarks || (e && e.parameter && e.parameter.remarks) || "";
     
-    // 3. 計算該期別的當期序號
+    // 3. 防重複寫入保護：若上一筆為同名、同期別且在 6 秒內，自動忽略重複請求
+    var lastRow = masterSheet.getLastRow();
+    if (lastRow > 1) {
+      var lastVals = masterSheet.getRange(lastRow, 1, 1, 10).getValues()[0];
+      var lastTime = new Date(lastVals[1]).getTime();
+      var lastName = String(lastVals[2]).trim();
+      var lastSession = String(lastVals[9]).trim();
+      var now = new Date().getTime();
+      if (lastName === name.trim() && lastSession === currentSession && (now - lastTime < 6000)) {
+        return ContentService.createTextOutput(JSON.stringify({ status: "duplicate_ignored" }))
+          .setMimeType(ContentService.MimeType.JSON);
+      }
+    }
+    
+    // 4. 計算當期序號：檢查第 J 欄 (索引 9) 是否符合當前期別
     var allData = masterSheet.getDataRange().getValues();
     var currentSessionCount = 0;
     for (var i = 1; i < allData.length; i++) {
-      if (allData[i][0] && allData[i][0].toString().trim() === currentSession) {
+      if (allData[i][9] && allData[i][9].toString().trim() === currentSession) {
         currentSessionCount++;
       }
     }
     var nextId = currentSessionCount + 1;
     var status = (nextId <= maxCap) ? "正取" : "候補";
     
-    // 4. 寫入後台大水庫：[活動期別, 當期序號, 時間戳記, 跑友姓名, 手機號碼, 預計跑量與配速, 備註, 來源管道, 狀態, 簽到核銷]
+    // 5. 寫入後台 10 欄 (第 A 欄為序號、第 J 欄為活動期別)
     masterSheet.appendRow([
-      currentSession,
       nextId,
       new Date(),
       name,
@@ -716,7 +732,8 @@
       remarks,
       "線上網頁報名",
       status,
-      false
+      false,
+      currentSession
     ]);
     
     return ContentService.createTextOutput(JSON.stringify({ status: "success", id: nextId, session: currentSession }))
@@ -724,20 +741,9 @@
   } catch (err) {
     return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
   }
-}
-
-function testWrite() {
-  doPost({
-    postData: {
-      contents: JSON.stringify({
-        name: "第26次測試跑友",
-        phone: "0912-345678",
-        pace: "歡樂跑 5K",
-        remarks: "大水庫測試"
-      })
-    }
-  });
 }</pre>
         <button class="btn btn-secondary" onclick="copyGasCode()">📋 一鍵複製 Apps Script 代碼</button>
       </div>
@@ -800,7 +806,7 @@ function testWrite() {
 
       try {
         // 1. Fetch Event Settings
-        const settingsUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("活動設定")}`;
+        const settingsUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("活動設定")}&_=${Date.now()}`;
         const resSettings = await fetch(settingsUrl);
         if (resSettings.ok) {
           const csvText = await resSettings.text();
@@ -809,7 +815,7 @@ function testWrite() {
             if (r.length >= 2) {
               const k = r[0].trim();
               const v = r[1].trim();
-              if (k === "活動期別代號" || k === "活動期別") eventConfig.session = v;
+              if (k.includes("期別") || k.includes("活動期別")) eventConfig.session = v;
               else if (k === "活動名稱") eventConfig.title = v;
               else if (k === "團練日期" || k === "活動日期") eventConfig.date = v;
               else if (k === "集合時間") eventConfig.time = v;
@@ -823,7 +829,7 @@ function testWrite() {
         }
 
         // 2. Fetch Public Roster (already filtered to current session by sheet formula)
-        const rosterUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("公開名冊_前端展示")}`;
+        const rosterUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("公開名冊_前端展示")}&_=${Date.now()}`;
         const resRoster = await fetch(rosterUrl);
         if (resRoster.ok) {
           const rosterCsv = await resRoster.text();
@@ -949,7 +955,11 @@ function testWrite() {
 
       showToast("⏳ 正在將報名傳送至 Google 試算表...");
 
-      // 1. Dual submission Method A: Hidden Iframe Form POST (Immune to CORS)
+      // Single submission via hidden iframe form (immune to CORS, prevents duplicates)
+      const submitBtn = document.getElementById("submitBtn");
+      submitBtn.disabled = true;
+      submitBtn.innerText = "⏳ 正在寫入雲端試算表...";
+
       try {
         const hiddenForm = document.getElementById("gasHiddenForm");
         hiddenForm.action = GAS_URL;
@@ -958,20 +968,8 @@ function testWrite() {
         document.getElementById("h_pace").value = pace;
         document.getElementById("h_remarks").value = remarks;
         hiddenForm.submit();
-      } catch (e1) {
-        console.warn("Iframe submit error", e1);
-      }
-
-      // 2. Dual submission Method B: Fetch POST with text/plain
-      try {
-        fetch(GAS_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({ name, phone, pace, remarks })
-        });
-      } catch (e2) {
-        console.warn("Fetch submit error", e2);
+      } catch (err) {
+        console.warn("Submit error", err);
       }
 
       showToast(`🎉 報名已送出！正在更新試算表...`);
