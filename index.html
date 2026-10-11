@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>馬兒一年千里目標啟動｜例行團練永久報名與名冊中心</title>
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=oTc3OgvS7xYavmCM7Mmr4Nf8-4IQauMzEifXfx4jpA882llvqeNbv0gUnS0nzYr2p5iH2_fYkxwMUYIqBtOUA6XTmXJX66VEe6LiwdSWD3g8dgGr4lGRQUWKQIeyqo2RMkj8DlCSOr106_z4ukYmuokoOBxmk8WKoGkjgRHVkz7ChqqfO0WuTx3zjd0HYWt8UcKcLhk0wSorlhNREcgLy72syNL-hFVLC4Nd-dkjRXK7ELNouykgRMXl8kBBWKW_num-uRwUVB3g4FqfCy_2Px6ygypjqm3GBTE9flweA9pj2O8gY67Flr2Takf0HQDD" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9jb250cmlidXRpb24udXNlcmNvbnRlbnQuZ29vZ2xlLmNvbS9kb3dubG9hZD9jPUNneGlZWEprWDNOMGIzSmhaMlVTVUJJTmNtVnpjRzl1YzJWZlpHRjBZUm9fQ2pBNE9UTTBObU14WTJVNFpHSXlNakExTURBd05qVmtPR1F6WVRVNE1qYzRZekE0TXpRek1ETmxOekV3Tm1ReE5qWVNDeElIRUo2Xzh0T3BBUmdCJmZpbGVuYW1lPWluZGV4Lmh0bWwmb3BpPTEwMzEzNTA1MA"/><style>
+    :root {
+      --primary: #f97316;
+      --primary-dark: #ea580c;
+      --primary-light: #ffedd5;
+      --secondary: #0ea5e9;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Top sync bar */
+    .sync-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .sync-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+    }
+
+    .sync-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--success);
+      display: inline-block;
+    }
+    .sync-dot.loading { background: var(--warning); animation: pulse 1s infinite; }
+    .sync-dot.offline { background: var(--text-muted); }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* Header Banner */
+    .header {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
+      color: white;
+      padding: 32px 24px;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::after {
+      content: "🏃";
+      position: absolute;
+      right: 16px;
+      bottom: -10px;
+      font-size: 88px;
+      opacity: 0.22;
+      pointer-events: none;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .status-pill {
+      background: #ffffff;
+      color: var(--primary-dark);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .header p {
+      font-size: 15px;
+      opacity: 0.95;
+    }
+
+    .motto {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 0, 0, 0.18);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Navigation Tabs */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 4px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 10px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .tab-btn.active {
+      color: white;
+      background: var(--primary);
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-main);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Info List */
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+    }
+
+    .info-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-content strong {
+      color: var(--text-main);
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 15px;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus {
+      border-color: var(--primary);
+    }
+
+    .form-helper {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+    }
+
+    .btn:hover { background: var(--primary-dark); }
+    .btn:active { transform: scale(0.99); }
+    .btn:disabled {
+      background: #cbd5e1;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #334155;
+      width: auto;
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+    .btn-secondary:hover { background: #e2e8f0; }
+
+    /* Table Toolbar */
+    .table-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .search-input {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 14px;
+      min-width: 220px;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--primary); }
+
+    .action-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Table Styling */
+    .table-responsive {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 12px 14px;
+      border-bottom: 1.5px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fffbf5; }
+
+    .status-badge-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .status-badge-waiting {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #fef3c7;
+      color: #b45309;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 16px;
+      color: var(--text-muted);
+    }
+    .empty-state-icon { font-size: 40px; margin-bottom: 8px; }
+
+    /* Code block */
+    pre {
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1e293b;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      font-size: 14px;
+      display: none;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Top Sync Status Bar -->
+    <div class="sync-bar">
+      <div class="sync-status">
+        <span class="sync-dot" id="syncDot"></span>
+        <span id="syncText">Google 試算表連線中...</span>
+      </div>
+      <div>
+        <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 12px;" onclick="refreshFromSheet()">🔄 重新整理名單</button>
+      </div>
+    </div>
+
+    <!-- Header Banner -->
+    <header class="header">
+      <div class="badge-row">
+        <span class="badge" id="eventBadge">第 26 次例行團練 🏃</span>
+        <span class="status-pill" id="eventStatusBadge">開放報名中</span>
+      </div>
+      <h1 id="eventTitle">🏃 馬兒一年千里目標啟動 第26次團練</h1>
+      <p id="eventSubtitle">來都會歡樂跑步，請踴躍報名！大家一起累積里程！</p>
+      <div class="motto" id="eventMotto">✨ 只有累積，沒有奇蹟！</div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" id="totalCount">0</div>
+        <div class="stat-label">當期接龍人數</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="maxCapacity">30</div>
+        <div class="stat-label">名額上限</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="eventDateDisplay">10/14(三)</div>
+        <div class="stat-label">團練日期</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="eventTimeDisplay">06:00</div>
+        <div class="stat-label">集合起跑時間</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" onclick="switchTab('rosterTab')">📋 當期名冊查詢 (Display on Web)</button>
+      <button class="tab-btn" onclick="switchTab('registerTab')">✍️ 線上報名接龍</button>
+      <button class="tab-btn" onclick="switchTab('infoTab')">ℹ️ 活動詳細說明</button>
+      <button class="tab-btn" onclick="switchTab('backendTab')">🔗 雲端資料庫狀態</button>
+    </nav>
+
+    <!-- TAB 1: Roster Display on Web -->
+    <div id="rosterTab" class="tab-content active">
+      <div class="card">
+        <div class="table-toolbar">
+          <div>
+            <h2 class="card-title">📊 當期接龍名冊（即時雲端同步）</h2>
+            <p style="font-size: 13px; color: var(--text-muted);">
+              模式 A 永久入口：自動依試算表設定過濾當期名冊，歷史紀錄永久留存後台
+            </p>
+          </div>
+          <div class="action-group">
+            <button class="btn btn-secondary" onclick="exportToCSV()">📥 匯出當期 Excel (CSV)</button>
+            <button class="btn btn-secondary" onclick="copyLineChainText()">📋 複製 LINE 接龍文字</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <input type="text" id="searchInput" class="search-input" placeholder="🔍 搜尋跑友姓名或備註..." oninput="filterRoster()">
+        </div>
+
+        <div class="table-responsive">
+          <table id="rosterTable">
+            <thead>
+              <tr>
+                <th style="width: 70px;">序號</th>
+                <th>跑友姓名 / 暱稱</th>
+                <th>預計跑量 / 配速</th>
+                <th>備註</th>
+                <th>狀態</th>
+              </tr>
+            </thead>
+            <tbody id="rosterBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Register Form -->
+    <div id="registerTab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">✍️ 線上報名接龍</h2>
+        <div id="regClosedNotice" style="display: none; background: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; border-radius: 4px; color: #991b1b; font-size: 14px; margin-bottom: 16px;">
+          ⚠️ 本場次活動目前非開放報名狀態，暫停受理報名。
+        </div>
+
+        <form id="regForm" onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <label class="form-label" for="runnerName">姓名或群組暱稱 <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="runnerName" class="form-input" placeholder="例如：淑華、小明" required>
+            <div class="form-helper">請填寫 LINE 群組內大家認識的稱呼</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="runnerPhone">手機號碼（選填，緊急聯絡用，不對外公開）</label>
+            <input type="tel" id="runnerPhone" class="form-input" placeholder="0912-345678">
+            <div class="form-helper">僅供團長後台緊急聯絡，公開名冊會自動隱藏</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="pacePlan">預計跑量與配速</label>
+            <select id="pacePlan" class="form-select">
+              <option value="歡樂跑 5K (輕鬆配速 6:30~7:00)">歡樂跑 5K (輕鬆配速 6:30~7:00)</option>
+              <option value="穩定巡航 10K (配速 6:00)">穩定巡航 10K (配速 6:00)</option>
+              <option value="進階挑戰 12~15K (配速 5:30)">進階挑戰 12~15K (配速 5:30)</option>
+              <option value="自行配速 / 健走組">自行配速 / 健走組</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="remarks">備註說明（選填）</label>
+            <input type="text" id="remarks" class="form-input" placeholder="例如：預計準時出發、開車可載 2 人等">
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn">🚀 送出接龍報名（自動回填 Google 試算表）</button>
+        </form>
+
+        <!-- Hidden Native Form for 100% Reliable Cross-Origin Submission without CORS issues -->
+        <form id="gasHiddenForm" target="gasIframe" method="POST" style="display:none;">
+          <input type="hidden" name="name" id="h_name">
+          <input type="hidden" name="phone" id="h_phone">
+          <input type="hidden" name="pace" id="h_pace">
+          <input type="hidden" name="remarks" id="h_remarks">
+        </form>
+        <iframe name="gasIframe" id="gasIframe" style="display:none;"></iframe>
+      </div>
+    </div>
+
+    <!-- TAB 3: Event Info -->
+    <div id="infoTab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">📍 活動行程與注意事項</h2>
+        <ul class="info-list">
+          <li class="info-item">
+            <span class="info-icon">📅</span>
+            <div class="info-content">
+              <strong>活動日期</strong>
+              <div id="infoDate">10/14（三）</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon">⏰</span>
+            <div class="info-content">
+              <strong>集合時間</strong>
+              <div id="infoTime">早上 06:00 準時起跑（請提前 10 分鐘抵達熱身）</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon">📍</span>
+            <div class="info-content">
+              <strong>集合地點</strong>
+              <div id="infoLocation">都會公園歡樂跑步集合點</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon">👥</span>
+            <div class="info-content">
+              <strong>名額限制</strong>
+              <div id="infoCap">30 人（額滿自動轉為候補）</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon">🎯</span>
+            <div class="info-content">
+              <strong>核心精神</strong>
+              <div id="infoMotto">「只有累積，沒有奇蹟！」馬兒一年千里目標持續推進！</div>
+            </div>
+          </li>
+          <li class="info-item">
+            <span class="info-icon">🎒</span>
+            <div class="info-content">
+              <strong>裝備提醒</strong>
+              <div id="infoNotice">跑鞋、遮陽帽、個人補給水瓶、換洗衣物與擦汗毛巾。</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TAB 4: Cloud Status & GAS Code -->
+    <div id="backendTab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">🔗 雲端資料庫連線狀態</h2>
+        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">
+          此網頁程式碼底層已內建綁定您的 Google 試算表與專屬 Apps Script API！
+        </p>
+
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+          <div style="margin-bottom: 10px;">
+            <strong>📊 綁定之 Google 試算表 ID：</strong><br>
+            <code style="color: var(--primary-dark); word-break: break-all;">1stL40m7QoE2x9p_JbmX-0VKtmLC8b7gnBkw1R7jmloM</code>
+          </div>
+          <div>
+            <strong>⚡ 綁定之 Apps Script API：</strong><br>
+            <code style="color: var(--primary-dark); font-size: 12px; word-break: break-all;">https://script.google.com/macros/s/AKfycbxTvslnioyIfPD6MPVPPBE7VNk3Y_A7fsFyHz04v8rwHJlIOzqpgIbU5gh0UhVpcgKHsw/exec</code>
+          </div>
+        </div>
+
+        <button class="btn btn-secondary" style="width: 100%; margin-bottom: 24px;" onclick="refreshFromSheet()">🔄 測試重新拉取試算表名冊</button>
+
+        <h3 style="font-size: 16px; margin-bottom: 8px;">📋 大水庫架構版 Apps Script 完整代碼：</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
+          若需更新試算表後台代碼，可複製以下內容貼至 Apps Script 並發布「新版本」：
+        </p>
+        <pre id="gasCode">function doPost(e) {
+  try {
+    var ss = SpreadsheetApp.openById("1stL40m7QoE2x9p_JbmX-0VKtmLC8b7gnBkw1R7jmloM");
+    var masterSheet = ss.getSheetByName("完整名冊_後台");
+    var settingsSheet = ss.getSheetByName("活動設定");
+    
+    // 1. 取得當前活動期別與名額上限
+    var currentSession = settingsSheet.getRange("B1").getValue().toString().trim() || "第26次";
+    var maxCap = parseInt(settingsSheet.getRange("B7").getValue(), 10) || 30;
+    
+    // 2. 解析網頁送入的資料
+    var data = {};
+    if (e && e.postData && e.postData.contents) {
+      try { data = JSON.parse(e.postData.contents); } catch(err) { data = e.parameter || {}; }
+    } else if (e && e.parameter) {
+      data = e.parameter;
+    }
+    
+    var name = data.name || (e && e.parameter && e.parameter.name) || "未具名";
+    var phone = data.phone || (e && e.parameter && e.parameter.phone) || "";
+    var pace = data.pace || (e && e.parameter && e.parameter.pace) || "歡樂跑 5K";
+    var remarks = data.remarks || (e && e.parameter && e.parameter.remarks) || "";
+    
+    // 3. 計算該期別的當期序號
+    var allData = masterSheet.getDataRange().getValues();
+    var currentSessionCount = 0;
+    for (var i = 1; i < allData.length; i++) {
+      if (allData[i][0] && allData[i][0].toString().trim() === currentSession) {
+        currentSessionCount++;
+      }
+    }
+    var nextId = currentSessionCount + 1;
+    var status = (nextId <= maxCap) ? "正取" : "候補";
+    
+    // 4. 寫入後台大水庫：[活動期別, 當期序號, 時間戳記, 跑友姓名, 手機號碼, 預計跑量與配速, 備註, 來源管道, 狀態, 簽到核銷]
+    masterSheet.appendRow([
+      currentSession,
+      nextId,
+      new Date(),
+      name,
+      phone,
+      pace,
+      remarks,
+      "線上網頁報名",
+      status,
+      false
+    ]);
+    
+    return ContentService.createTextOutput(JSON.stringify({ status: "success", id: nextId, session: currentSession }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function testWrite() {
+  doPost({
+    postData: {
+      contents: JSON.stringify({
+        name: "第26次測試跑友",
+        phone: "0912-345678",
+        pace: "歡樂跑 5K",
+        remarks: "大水庫測試"
+      })
+    }
+  });
+}</pre>
+        <button class="btn btn-secondary" onclick="copyGasCode()">📋 一鍵複製 Apps Script 代碼</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    // HARDCODED VERIFIED CONSTANTS
+    const SPREADSHEET_ID = "1stL40m7QoE2x9p_JbmX-0VKtmLC8b7gnBkw1R7jmloM";
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbxTvslnioyIfPD6MPVPPBE7VNk3Y_A7fsFyHz04v8rwHJlIOzqpgIbU5gh0UhVpcgKHsw/exec";
+
+    // Auto-update localStorage with the verified correct URL
+    localStorage.setItem("event_sheet_id", SPREADSHEET_ID);
+    localStorage.setItem("event_gas_url", GAS_URL);
+
+    // Local in-memory state
+    let eventConfig = {
+      session: "第26次",
+      title: "🏃 馬兒一年千里目標啟動 第26次團練",
+      date: "10/14 (三)",
+      time: "06:00",
+      location: "都會公園歡樂跑步集合點",
+      motto: "只有累積，沒有奇蹟！",
+      capacity: 30,
+      status: "開放報名中",
+      notice: "跑鞋、遮陽帽、個人補給水瓶、換洗衣物與擦汗毛巾。身體不適者請充分休息。"
+    };
+
+    let rosterList = [];
+
+    // Parse CSV line safely
+    function parseCSV(text) {
+      const lines = text.split(/\r\n|\n/).filter(l => l.trim().length > 0);
+      return lines.map(line => {
+        const matches = [];
+        let inQuotes = false;
+        let token = "";
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          if (char === '"') {
+            inQuotes = !inQuotes;
+          } else if (char === ',' && !inQuotes) {
+            matches.push(token.trim().replace(/^"|"$/g, ''));
+            token = "";
+          } else {
+            token += char;
+          }
+        }
+        matches.push(token.trim().replace(/^"|"$/g, ''));
+        return matches;
+      });
+    }
+
+    // Fetch live from Google Sheet (via GViz CSV export)
+    async function loadDataFromGoogleSheet() {
+      setSyncStatus("loading", "正在同步 Google 試算表...");
+
+      try {
+        // 1. Fetch Event Settings
+        const settingsUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("活動設定")}`;
+        const resSettings = await fetch(settingsUrl);
+        if (resSettings.ok) {
+          const csvText = await resSettings.text();
+          const rows = parseCSV(csvText);
+          rows.forEach(r => {
+            if (r.length >= 2) {
+              const k = r[0].trim();
+              const v = r[1].trim();
+              if (k.includes("活動期別代號") || k.includes("期別")) eventConfig.session = v;
+              if (k.includes("活動名稱")) eventConfig.title = v;
+              if (k.includes("團練日期") || k.includes("活動日期")) eventConfig.date = v;
+              if (k.includes("集合時間")) eventConfig.time = v;
+              if (k.includes("集合地點")) eventConfig.location = v;
+              if (k.includes("核心標語") || k.includes("標語")) eventConfig.motto = v;
+              if (k.includes("名額上限")) eventConfig.capacity = parseInt(v, 10) || 30;
+              if (k.includes("活動狀態")) eventConfig.status = v;
+              if (k.includes("注意事項")) eventConfig.notice = v;
+            }
+          });
+        }
+
+        // 2. Fetch Public Roster (already filtered to current session by sheet formula)
+        const rosterUrl = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent("公開名冊_前端展示")}`;
+        const resRoster = await fetch(rosterUrl);
+        if (resRoster.ok) {
+          const rosterCsv = await resRoster.text();
+          const rows = parseCSV(rosterCsv);
+          const newRoster = [];
+          // Skip header row
+          for (let i = 1; i < rows.length; i++) {
+            const r = rows[i];
+            if (r.length >= 2 && r[1] && r[1].trim()) {
+              newRoster.push({
+                id: r[0] || (newRoster.length + 1),
+                name: r[1],
+                pace: r[2] || "-",
+                remarks: r[3] || "-",
+                status: r[4] || (newRoster.length + 1 <= eventConfig.capacity ? "正取" : "候補")
+              });
+            }
+          }
+          rosterList = newRoster;
+        }
+
+        updateUI();
+        setSyncStatus("success", "已成功連線 Google 試算表");
+      } catch (err) {
+        console.warn("GViz fetch failed, fallback to local display", err);
+        updateUI();
+        setSyncStatus("offline", "目前使用本機快取名單");
+      }
+    }
+
+    function setSyncStatus(type, text) {
+      const dot = document.getElementById("syncDot");
+      dot.className = "sync-dot " + type;
+      document.getElementById("syncText").innerText = text;
+    }
+
+    function updateUI() {
+      document.getElementById("eventTitle").innerText = eventConfig.title;
+      document.getElementById("eventBadge").innerText = `${eventConfig.session}例行團練 🏃`;
+      document.getElementById("eventDateDisplay").innerText = eventConfig.date;
+      document.getElementById("eventTimeDisplay").innerText = eventConfig.time;
+      document.getElementById("maxCapacity").innerText = eventConfig.capacity;
+      document.getElementById("eventMotto").innerText = `✨ ${eventConfig.motto}`;
+      document.getElementById("eventStatusBadge").innerText = eventConfig.status;
+
+      if (eventConfig.status.includes("截止") || eventConfig.status.includes("結束")) {
+        document.getElementById("eventStatusBadge").style.color = "#ef4444";
+        document.getElementById("regClosedNotice").style.display = "block";
+        document.getElementById("submitBtn").disabled = true;
+        document.getElementById("submitBtn").innerText = "⛔ 本場次報名已截止";
+      } else {
+        document.getElementById("eventStatusBadge").style.color = "var(--primary-dark)";
+        document.getElementById("regClosedNotice").style.display = "none";
+        document.getElementById("submitBtn").disabled = false;
+        document.getElementById("submitBtn").innerText = `🚀 送出接龍報名（自動排為第 ${rosterList.length + 1} 號）`;
+      }
+
+      document.getElementById("infoDate").innerText = eventConfig.date;
+      document.getElementById("infoTime").innerText = eventConfig.time;
+      document.getElementById("infoLocation").innerText = eventConfig.location;
+      document.getElementById("infoCap").innerText = `${eventConfig.capacity} 人（額滿自動轉為候補）`;
+      document.getElementById("infoMotto").innerText = eventConfig.motto;
+      document.getElementById("infoNotice").innerText = eventConfig.notice;
+
+      renderRoster();
+    }
+
+    function renderRoster(filterText = "") {
+      const tbody = document.getElementById("rosterBody");
+      tbody.innerHTML = "";
+
+      const filtered = rosterList.filter(r => 
+        r.name.toLowerCase().includes(filterText.toLowerCase()) || 
+        (r.remarks && r.remarks.toLowerCase().includes(filterText.toLowerCase())) ||
+        (r.pace && r.pace.toLowerCase().includes(filterText.toLowerCase()))
+      );
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5">
+              <div class="empty-state">
+                <div class="empty-state-icon">👟</div>
+                <div style="font-weight: 600; font-size: 15px; margin-bottom: 4px;">本場次（${escapeHtml(eventConfig.session)}）尚無報名資料</div>
+                <div>歡迎前往「✍️ 線上報名接龍」登記成為第 1 位跑友！</div>
+              </div>
+            </td>
+          </tr>
+        `;
+      } else {
+        filtered.forEach((r, idx) => {
+          const tr = document.createElement("tr");
+          const isWaiting = r.status.includes("候補");
+          const badgeClass = isWaiting ? "status-badge-waiting" : "status-badge-primary";
+          const badgeText = isWaiting ? "⏳ 候補" : "✅ 正取";
+
+          tr.innerHTML = `
+            <td><strong>#${r.id}</strong></td>
+            <td><strong>${escapeHtml(r.name)}</strong></td>
+            <td>${escapeHtml(r.pace)}</td>
+            <td>${escapeHtml(r.remarks)}</td>
+            <td><span class="${badgeClass}">${badgeText}</span></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      const total = rosterList.length;
+      document.getElementById("totalCount").innerText = total;
+    }
+
+    async function handleRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById("runnerName").value.trim();
+      const phone = document.getElementById("runnerPhone").value.trim();
+      const pace = document.getElementById("pacePlan").value;
+      const remarks = document.getElementById("remarks").value.trim();
+
+      if (!name) return;
+
+      const nextId = rosterList.length + 1;
+      const status = nextId <= eventConfig.capacity ? "正取" : "候補";
+
+      showToast("⏳ 正在將報名傳送至 Google 試算表...");
+
+      // 1. Dual submission Method A: Hidden Iframe Form POST (Immune to CORS)
+      try {
+        const hiddenForm = document.getElementById("gasHiddenForm");
+        hiddenForm.action = GAS_URL;
+        document.getElementById("h_name").value = name;
+        document.getElementById("h_phone").value = phone;
+        document.getElementById("h_pace").value = pace;
+        document.getElementById("h_remarks").value = remarks;
+        hiddenForm.submit();
+      } catch (e1) {
+        console.warn("Iframe submit error", e1);
+      }
+
+      // 2. Dual submission Method B: Fetch POST with text/plain
+      try {
+        fetch(GAS_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ name, phone, pace, remarks })
+        });
+      } catch (e2) {
+        console.warn("Fetch submit error", e2);
+      }
+
+      showToast(`🎉 報名已送出！正在更新試算表...`);
+
+      // Add to local UI temporarily
+      rosterList.push({
+        id: nextId,
+        name: name,
+        pace: pace,
+        remarks: remarks || "-",
+        status: status
+      });
+
+      document.getElementById("regForm").reset();
+      updateUI();
+
+      // Refresh live from Google Sheet after 2.5 seconds
+      setTimeout(() => { loadDataFromGoogleSheet(); }, 2500);
+
+      switchTab('rosterTab');
+    }
+
+    function filterRoster() {
+      const q = document.getElementById("searchInput").value;
+      renderRoster(q);
+    }
+
+    function refreshFromSheet() {
+      loadDataFromGoogleSheet();
+      showToast("🔄 正在向 Google 試算表抓取最新名單...");
+    }
+
+    function copyGasCode() {
+      const code = document.getElementById("gasCode").innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        showToast("📋 已複製 Apps Script 代碼到剪貼簿！");
+      });
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+
+      const mapping = { rosterTab: 0, registerTab: 1, infoTab: 2, backendTab: 3 };
+      document.querySelectorAll('.tab-btn')[mapping[tabId]].classList.add('active');
+    }
+
+    function exportToCSV() {
+      if (rosterList.length === 0) {
+        showToast("⚠️ 目前名單為空白，尚無資料可匯出！");
+        return;
+      }
+      let csv = "﻿序號,姓名,預計跑量與配速,備註,狀態\n";
+      rosterList.forEach(r => {
+        csv += `${r.id},"${r.name}","${r.pace}","${r.remarks}","${r.status}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${eventConfig.title}_${eventConfig.session}名冊.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast("📥 已成功下載 Excel / CSV 名冊！");
+    }
+
+    function copyLineChainText() {
+      let text = `${eventConfig.title}\n⏰${eventConfig.date} 集合起跑：${eventConfig.time}\n📍地點：${eventConfig.location}\n✨${eventConfig.motto}\n\n請接龍：\n`;
+      if (rosterList.length === 0) {
+        text += "1. (歡迎接龍報名)\n";
+      } else {
+        rosterList.forEach(r => {
+          text += `${r.id}. ${r.name} (${r.status})\n`;
+        });
+      }
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("📋 已複製最新 LINE 接龍文案到剪貼簿！");
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.innerText = msg;
+      toast.style.display = "block";
+      setTimeout(() => { toast.style.display = "none"; }, 3000);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    // Init
+    loadDataFromGoogleSheet();
+  </script>
+</body>
+</html>
